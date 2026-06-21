@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="music-player">
+    <h1>Music Player</h1>
+
+    <img src="images/cover1.jpg" alt="Song Cover" class="cover js-cover" />
+
+    <div class="song-info">
+  <div class="marquee">
+    <h2 class="js-title">Song Title</h2>
+  </div>
+
+  <div class="marquee artist-marquee">
+    <p class="js-artist">Artist Name</p>
+  </div>
+</div>
+
+    <audio class="js-audio" src="songs/song1.mp3"></audio>
+
+    <div class="time">
+      <span class="js-current-time">0:00</span>
+      <span class="js-duration">0:00</span>
+    </div>
+
+    <input type="range" class="progress js-progress" value="0" min="0" max="100" />
+
+   <div class="controls">
+  <button class="js-shuffle" title="Shuffle">🔀</button>
+  <button class="js-prev">⏮</button>
+  <button class="js-play">▶</button>
+  <button class="js-next">⏭</button>
+  <button class="js-repeat" title="Repeat">🔁</button>
+</div>
+
+<button class="queue-header js-queue-toggle">
+  📋 Queue <span>▼</span>
+</button>
+
+<div class="queue-box js-queue-box">
+  <ul class="playlist js-playlist">
+    <!-- Queue comes from JavaScript -->
+  </ul>
+</div>
+
+    <div class="volume-box">
+      <label>Volume</label>
+      <input type="range" class="js-volume" min="0" max="1" step="0.01" value="1" />
+    </div>
+
+    <div class="queue-box js-queue-box">
+  <h3>Queue</h3>
+  <ul class="playlist js-playlist">
+    <!-- Queue songs will come from JavaScript -->
+  </ul>
+</div>
+
+<div class="lyrics-box">
+  <h3>Lyrics</h3>
+  <p class="js-lyrics">Lyrics will appear here...</p>
+</div>
+
+  </main>
+
+  <script type="module"  src="script.js"></script>
+</body>
+</html>
